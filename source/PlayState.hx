@@ -40,10 +40,5 @@ class PlayState extends FlxState
         add(chimi);
         
             FlxG.sound.playMusic("assets/chimi.ogg", 1, true);
-
-    override public function update(elapsed:Float):Void
-    {
-        super.update(elapsed);
     }
-}
 }
