@@ -37,11 +37,8 @@ class PlayState extends FlxState
 
         chimi.screenCenter();
         add(chimi);
-
-        // Música em loop
-        if (Assets.exists("assets/chimi.mp3"))
-            FlxG.sound.playMusic("assets/chimi.mp3", 1, true);
-    }
+        
+            FlxG.sound.playMusic("assets/chimi.ogg", 1, true);
 
     override public function update(elapsed:Float):Void
     {
