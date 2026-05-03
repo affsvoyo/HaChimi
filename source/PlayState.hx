@@ -42,27 +42,28 @@ class PlayState extends FlxState
     }
 
     function loadChimiSet(set:Int):Void
+{
+    var pngPath:String = 'assets/chimi-' + set + '.png';
+    var xmlPath:String = 'assets/chimi-' + set + '.xml';
+
+    // NÃO destruir animações antigas manualmente
+    chimi.frames = null;
+
+    if (Assets.exists(xmlPath) && Assets.exists(pngPath))
     {
-        var pngPath:String = 'assets/chimi-' + set + '.png';
-        var xmlPath:String = 'assets/chimi-' + set + '.xml';
+        chimi.frames = FlxAtlasFrames.fromSparrow(
+            pngPath,
+            xmlPath
+        );
 
-        chimi.animation.destroyAnimations();
-
-        if (Assets.exists(xmlPath))
-        {
-            chimi.frames = FlxAtlasFrames.fromSparrow(
-                pngPath,
-                xmlPath
-            );
-
-            chimi.animation.addByPrefix("idle", "chimi", 24, false);
-            chimi.animation.play("idle", true);
-        }
-        else
-        {
-            chimi.loadGraphic(pngPath);
-        }
-
-        chimi.screenCenter();
+        chimi.animation.addByPrefix("idle", "chimi", 24, false);
+        chimi.animation.play("idle", true);
     }
+    else if (Assets.exists(pngPath))
+    {
+        chimi.loadGraphic(pngPath);
+    }
+
+    chimi.screenCenter();
+  }
 }
