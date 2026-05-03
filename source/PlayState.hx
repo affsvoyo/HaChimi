@@ -34,6 +34,7 @@ class PlayState extends FlxState
         {
             chimi.loadGraphic("assets/chimi.png");
         }
+        
 
         chimi.screenCenter();
         add(chimi);
@@ -44,4 +45,5 @@ class PlayState extends FlxState
     {
         super.update(elapsed);
     }
+}
 }
