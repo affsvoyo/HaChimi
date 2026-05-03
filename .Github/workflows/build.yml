@@ -1,0 +1,54 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@v1
+        with:
+          haxe-version: 4.2.5
+
+      - name: Cache Windows Build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/haxelib
+            export
+          key: windows-${{ runner.os }}-${{ hashFiles('**/Project.xml') }}
+
+      - name: Install Libraries
+        shell: bash
+        run: |
+          haxelib setup ~/haxelib
+          haxelib install lime --quiet
+          haxelib install openfl --quiet
+          haxelib install flixel --quiet
+          haxelib install flixel-addons --quiet
+          haxelib install flixel-tools --quiet
+          haxelib install flixel-ui --quiet
+
+      - name: Run Setup
+        shell: bash
+        run: |
+          haxelib run lime setup
+
+      - name: Build Windows
+        shell: bash
+        run: |
+          haxelib run lime build windows
+
+      - name: Upload Windows Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Strident-Crisis-Shader-generator-windows
+          path: export/windows/bin/
