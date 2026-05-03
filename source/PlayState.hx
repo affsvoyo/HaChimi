@@ -9,6 +9,7 @@ import openfl.Assets;
 class PlayState extends FlxState
 {
     var chimi:FlxSprite;
+    var currentSet:Int = 0; // 0 = chimi-0, 1 = chimi-1
 
     override public function create():Void
     {
@@ -19,26 +20,49 @@ class PlayState extends FlxState
 
         chimi = new FlxSprite();
 
-        // Verifica se XML existe
-        if (Assets.exists("assets/chimi.xml"))
-        {
-            chimi.frames = FlxAtlasFrames.fromSparrow(
-                "assets/chimi.png",
-                "assets/chimi.xml"
-            );
-
-            chimi.animation.addByPrefix("idle", "chimi", 24, true);
-            chimi.animation.play("idle");
-        }
-        else
-        {
-            chimi.loadGraphic("assets/chimi.png");
-        }
-        
+        loadChimiSet(currentSet);
 
         chimi.screenCenter();
         add(chimi);
-        
-            FlxG.sound.playMusic("assets/chimi.ogg", 1, true);
+
+        // Música em loop
+        FlxG.sound.playMusic("assets/chimi.ogg", 1, true);
+    }
+
+    override public function update(elapsed:Float):Void
+    {
+        super.update(elapsed);
+
+        // Quando a animação terminar, troca para o próximo sprite
+        if (chimi.animation.curAnim != null && chimi.animation.curAnim.finished)
+        {
+            currentSet = (currentSet + 1) % 2; // Alterna entre 0 e 1
+            loadChimiSet(currentSet);
+        }
+    }
+
+    function loadChimiSet(set:Int):Void
+    {
+        var pngPath:String = 'assets/chimi-' + set + '.png';
+        var xmlPath:String = 'assets/chimi-' + set + '.xml';
+
+        chimi.animation.destroyAnimations();
+
+        if (Assets.exists(xmlPath))
+        {
+            chimi.frames = FlxAtlasFrames.fromSparrow(
+                pngPath,
+                xmlPath
+            );
+
+            chimi.animation.addByPrefix("idle", "chimi", 24, false);
+            chimi.animation.play("idle", true);
+        }
+        else
+        {
+            chimi.loadGraphic(pngPath);
+        }
+
+        chimi.screenCenter();
     }
 }
