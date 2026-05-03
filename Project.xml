@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <meta title="Chimi" package="com.chimi.loop" version="1.0.0" company="OpenAI" />
+
+    <app main="Main" file="Chimi" path="export" />
+
+    <window width="800" height="800" fps="60" background="#FFFFFF" />
+
+    <source path="source" />
+
+    <assets path="assets" rename="assets" />
+
+    <haxelib name="openfl" />
+    <haxelib name="lime" />
+    <haxelib name="flixel" />
+    <haxelib name="flixel-addons" />
+    <haxelib name="flixel-ui" />
+</project>
