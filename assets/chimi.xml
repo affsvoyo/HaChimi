@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="chimi.png" width="3854" height="4052">
+	<SubTexture name="chimi0001.png" x="1" y="1" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0002.png" x="1" y="580" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0003.png" x="772" y="1" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0004.png" x="772" y="580" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0005.png" x="1" y="1159" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0006.png" x="772" y="1159" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0007.png" x="1543" y="1" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0008.png" x="1543" y="580" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0009.png" x="1543" y="1159" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0010.png" x="1" y="1738" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0011.png" x="772" y="1738" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0012.png" x="1543" y="1738" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0013.png" x="2314" y="1" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0014.png" x="2314" y="580" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0015.png" x="2314" y="1159" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0016.png" x="2314" y="1738" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0017.png" x="1" y="2317" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0018.png" x="772" y="2317" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0019.png" x="1543" y="2317" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0020.png" x="2314" y="2317" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0021.png" x="1" y="2896" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0022.png" x="772" y="2896" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0023.png" x="1543" y="2896" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0024.png" x="2314" y="2896" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0025.png" x="3085" y="1" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0026.png" x="3085" y="580" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0027.png" x="3085" y="1159" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0028.png" x="3085" y="1738" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0029.png" x="3085" y="2317" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0030.png" x="3085" y="2896" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0031.png" x="1" y="3475" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0032.png" x="772" y="3475" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+	<SubTexture name="chimi0033.png" x="1543" y="3475" width="768" height="576" frameX="-0" frameY="-0" frameWidth="768" frameHeight="576"/>
+</TextureAtlas>
